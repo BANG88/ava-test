@@ -39,3 +39,23 @@ npm test
 ```sh
 npm run test:watch
 ```
+
+
+## react
+
+- http://airbnb.io/enzyme/
+- http://reactjs.org
+
+
+> 安装依赖解析jsx语法
+
+```sh
+npm i --save-dev enzyme react-addons-test-utils  react-dom
+```
+
+ava不支持浏览器环境测试，所以还要安装jsdom，如果要模拟点击事件 可以使用sinon
+
+```sh
+npm i jsdom sinon -D
+```
+

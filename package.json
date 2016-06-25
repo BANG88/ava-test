@@ -1,26 +1,36 @@
 {
-    "name": "ava-test",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "ava --verbose",
-        "test:watch": "npm run test -- --watch"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "ava": "^0.15.2"
-    },
-    "ava": {
-        "require": [
-            "babel-register"
-        ]
-    },
-    "babel": {
-        "presets": [
-            "es2015"
-        ]
-    }
+  "name": "ava-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose",
+    "test:watch": "npm run test -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "babel-preset-react": "^6.5.0",
+    "enzyme": "^2.3.0",
+    "jsdom": "^9.2.1",
+    "react-addons-test-utils": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "sinon": "^1.17.4"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "react": "^15.1.0"
+  }
 }
