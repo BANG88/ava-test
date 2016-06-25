@@ -4,8 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "cover": "nyc npm run test",        
         "test": "ava --verbose",
-        "test:watch": "npm run test -- --watch"
+        "test:watch": "npm test -- --watch"
     },
     "keywords": [],
     "author": "",
@@ -15,9 +16,17 @@
         "babel-preset-react": "^6.5.0",
         "enzyme": "^2.3.0",
         "jsdom": "^9.2.1",
+        "nyc": "^6.6.1",
         "react-addons-test-utils": "^15.1.0",
         "react-dom": "^15.1.0",
         "sinon": "^1.17.4"
+    },
+    "nyc": {
+        "reporter": [
+            "lcov",
+            "text",
+            "html"
+        ]
     },
     "ava": {
         "concurrency": 5,

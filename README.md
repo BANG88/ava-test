@@ -59,3 +59,47 @@ ava不支持浏览器环境测试，所以还要安装jsdom，如果要模拟点
 npm i jsdom sinon -D
 ```
 
+## nyc
+
+使用nyc生成覆盖率
+
+```sh
+npm i nyc --save-dev
+```
+
+
+
+```sh
+npm run cover                                                          
+```  
+
+```sh                                                                       
+> ava-test@1.0.0 cover E:\demos\ava-test                                 
+> nyc npm run test                                                       
+                                                                         
+                                                                         
+> ava-test@1.0.0 test E:\demos\ava-test                                  
+> ava --verbose                                                          
+                                                                         
+                                                                         
+  √ index » Index应该是一个方法                                                 
+  √ index » Index()应该返回一个字符串                                             
+  √ index » Index("你好")应该等于你好                                            
+  √ Item » 应该返回一个div元素                                                   
+  √ Item » .title                                                        
+  √ Item » .price                                                        
+  √ Item » .desc                                                         
+  √ Item » a                                                             
+  √ Item » click                                                         
+                                                                         
+  9 tests passed [18:13:53]                                              
+                                                                         
+----------|----------|----------|----------|----------|----------------| 
+File      |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines | 
+----------|----------|----------|----------|----------|----------------| 
+----------|----------|----------|----------|----------|----------------| 
+All files |      100 |      100 |      100 |      100 |                | 
+----------|----------|----------|----------|----------|----------------| 
+                                                                         
+```                                                                         
+
