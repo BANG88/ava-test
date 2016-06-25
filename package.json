@@ -1,0 +1,26 @@
+{
+    "name": "ava-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "ava --verbose",
+        "test:watch": "npm run test -- --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "ava": "^0.15.2"
+    },
+    "ava": {
+        "require": [
+            "babel-register"
+        ]
+    },
+    "babel": {
+        "presets": [
+            "es2015"
+        ]
+    }
+}
