@@ -5,36 +5,41 @@ import { shallow, mount } from 'enzyme'
 import Item from '../src/Item'
 
 test('应该返回一个div元素', t => {
-  const w = shallow(<Item/>)
-  t.is(w.type(), 'div')
+	const w = shallow(<Item/>)
+	t.is(w.type(), 'div')
 })
 
 // http://airbnb.io/enzyme/docs/api/selector.html
 // selector
 test('.title', t => {
-  const w = shallow(<Item/>)
-  t.is(w.find('.title').length, 1)
+	const w = shallow(<Item/>)
+	t.is(w.find('.title').length, 1)
 })
 
 test('.price', t => {
-  const w = shallow(<Item/>)
-  t.is(w.find('.price').text(), '$200.00')
+	const w = shallow(<Item/>)
+	t.is(w.find('.price').text(), '$200.00')
 })
 
 test('.desc', t => {
-  const w = shallow(<Item/>)
-  t.is(w.find('.desc').type(), 'p')
+	const w = shallow(<Item/>)
+	t.is(w.find('.desc').type(), 'p')
 })
 
 test('a', t => {
-  const w = shallow(<Item/>)
-  t.is(w.find('a[href="/item/1"]').length, 1)
+	const w = shallow(<Item/>)
+	t.is(w.find('a[href="/item/1"]').length, 1)
 })
 
 test('click', t => {
-  const w = shallow(<Item/>)
-  t.is(w.find('.clicked').text(), '')
-  w.find('button').simulate('click')
-  t.true(w.state().clicked)
-  t.is(w.find('.clicked').text(), 'clicked')
+	const w = shallow(<Item/>)
+	t.is(w.find('.clicked').text(), '')
+	w.find('button').simulate('click')
+	t.true(w.state().clicked)
+	t.is(w.find('.clicked').text(), 'clicked')
+})
+
+test('应该包含title属性', t => {
+	const w = mount(<Item title="item"/>)
+	t.is(w.props().title, 'item')
 })
