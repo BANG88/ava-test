@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "cover": "nyc npm run test",        
+        "cover": "nyc npm run test",
         "test": "ava --verbose",
         "test:watch": "npm test -- --watch"
     },
@@ -29,11 +29,10 @@
         ]
     },
     "ava": {
-        "concurrency": 5,
+        "babel": "inherit",
         "require": [
-            "babel-register"
-        ],
-        "babel": "inherit"
+            "./test/helpers/setup-test-env.js"
+        ]
     },
     "babel": {
         "presets": [
